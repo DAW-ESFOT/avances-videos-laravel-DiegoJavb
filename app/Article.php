@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class Article extends Model
 {
-    protected $fillable = ['title', 'body'];
+    protected $fillable = ['title', 'body','category_id'];
 
     public static function boot()
     {
@@ -19,7 +19,7 @@ class Article extends Model
 
     public function comments()
     {
-        return $this->hasMany('App\Comments');
+        return $this->hasMany('App\Comment');
     }
 
     public function user()
