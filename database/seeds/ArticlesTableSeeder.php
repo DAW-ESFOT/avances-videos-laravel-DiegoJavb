@@ -26,11 +26,14 @@ class ArticlesTableSeeder extends Seeder
             // Y ahora con este usuario creamos algunos articulos
             $num_articles = 5;
             for ($j = 0; $j < $num_articles; $j++) {
-                Article::create([
-                    'title' => $faker->sentence,
-                    'body' => $faker->paragraph,
-                    'Category_id' => $faker->numberBetween(1, 3),
-                ]);
+                //$image_name = $faker->image('public/storage/articles', 400, 300, null,false);
+                    Article::create([
+                        'title' => $faker->sentence,
+                        'body' => $faker->paragraph,
+                        'Category_id' => $faker->numberBetween(1, 3),
+                        //'image' => 'articles/' . $image_name
+                        'image'=>$faker->imageUrl(400,300, null, false)
+                    ]);
             }
         }
 
