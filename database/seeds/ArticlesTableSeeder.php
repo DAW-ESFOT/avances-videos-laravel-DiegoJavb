@@ -31,6 +31,7 @@ class ArticlesTableSeeder extends Seeder
                         'title' => $faker->sentence,
                         'body' => $faker->paragraph,
                         'Category_id' => $faker->numberBetween(1, 3),
+                        //'comment'=>$faker->paragraph,
                         //'image' => 'articles/' . $image_name
                         'image'=>$faker->imageUrl(400,300, null, false)
                     ]);
